@@ -30,19 +30,19 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     // JSON 数据解析
     implementation "com.google.code.gson:gson:$gson_version"
-
-    // EventBus
-    implementation 'org.greenrobot:eventbus:3.1.1'
     // RxJava
     implementation "io.reactivex:rxkotlin:$rxkotlin_version"
     implementation "io.reactivex:rxandroid:$rxandroid_version"
 
+    // EventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation "com.squareup.retrofit2:adapter-rxjava:$retrofit_version"
 
-
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:3.10.0'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }

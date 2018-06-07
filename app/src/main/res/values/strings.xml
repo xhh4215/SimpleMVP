@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MVPDemo</string>
+    <string name="button_text_one">okhttp的get请求</string>
 </resources>

@@ -1,7 +1,6 @@
 package example.xhh.com.mvpdemo.mvp.contract
 
 import example.xhh.com.mvpdemo.base.BasePresenter
-import example.xhh.com.mvpdemo.mvp.model.MenuListBean
 
 /**
  * Created by xhh on 2018/6/7.
@@ -13,7 +12,7 @@ interface MainContract {
         fun showProgress()
 
         // 加载成功更新activity数据
-        fun onSucceed(model:MenuListBean)
+        fun <T> onSucceed(model: T)
 
         //加载失败在actiivty中给出提示
         fun onFail(err: String)
@@ -24,8 +23,10 @@ interface MainContract {
     }
 
     // 结合model数据对view进行操作的逻辑
-    abstract class Presenter : BasePresenter() {
+    abstract  class Presenter : BasePresenter() {
         //进行具体的逻辑的处理
         abstract fun loadingData(key: String)
+
+        abstract fun loadMenuData(key: String)
     }
 }
